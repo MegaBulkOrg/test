@@ -13,10 +13,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Install dependencies & build
+      - name: Ensure dist exists
         run: |
-          npm ci
-          npm run build
+          test -d dist || (echo "dist missing" && exit 1)
 
       - name: Setup SSH
         run: |
