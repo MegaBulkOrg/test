@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Container from '../Container'
+import ThemeToggle from '../ThemeToggle'
 import styles from './styles.module.sass'
 
 interface NavItem {
@@ -28,17 +29,6 @@ export default function Header() {
           JS для Р7-Офис
         </a>
 
-        <button
-          className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}
-          onClick={() => setMenuOpen((prev) => !prev)}
-          aria-label="Открыть меню"
-          type="button"
-        >
-          <span />
-          <span />
-          <span />
-        </button>
-
         <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
           {NAV_ITEMS.map((item) => (
             <a
@@ -51,6 +41,20 @@ export default function Header() {
             </a>
           ))}
         </nav>
+
+        <div className={styles.actions}>
+          <ThemeToggle />
+          <button
+            className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}
+            onClick={() => setMenuOpen((prev) => !prev)}
+            aria-label="Открыть меню"
+            type="button"
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
       </Container>
     </header>
   )

@@ -2,17 +2,19 @@
 
 .section
   padding: $spacing-2xl 0
+  transition: background-color $transition-theme
 
   @media (max-width: 768px)
     padding: $spacing-xl 0
 
 .alternate
-  background-color: $color-bg-alt
+  background-color: var(--color-bg-alt)
 
 .title
   font-size: $font-size-2xl
-  color: $color-text
+  color: var(--color-text)
   margin-bottom: $spacing-lg
+  transition: color $transition-theme
 
   @media (max-width: 768px)
     font-size: $font-size-xl

@@ -4,21 +4,29 @@
   position: sticky
   top: 0
   z-index: 100
-  background-color: rgba($color-bg, 0.95)
+  background-color: var(--color-header-bg)
   backdrop-filter: blur(8px)
-  border-bottom: 1px solid $color-border
+  border-bottom: 1px solid var(--color-border)
+  transition: background-color $transition-theme, border-color $transition-theme
 
 .inner
   display: flex
   align-items: center
   justify-content: space-between
   height: 64px
+  gap: $spacing-sm
 
 .logo
   font-size: $font-size-lg
   font-weight: 700
-  color: $color-text
+  color: var(--color-text)
   white-space: nowrap
+  transition: color $transition-theme
+
+.actions
+  display: flex
+  align-items: center
+  gap: $spacing-xs
 
 .nav
   display: flex
@@ -32,8 +40,8 @@
     left: 0
     right: 0
     flex-direction: column
-    background-color: $color-bg
-    border-bottom: 1px solid $color-border
+    background-color: var(--color-bg)
+    border-bottom: 1px solid var(--color-border)
     padding: $spacing-sm 0
     gap: 0
 
@@ -44,12 +52,12 @@
 .link
   font-size: $font-size-sm
   font-weight: 500
-  color: $color-text-secondary
+  color: var(--color-text-secondary)
   transition: color $transition-base
   padding: $spacing-xs $spacing-sm
 
   &:hover
-    color: $color-primary
+    color: var(--color-primary)
 
 .burger
   display: none
@@ -66,7 +74,7 @@
     display: block
     width: 100%
     height: 2px
-    background-color: $color-text
+    background-color: var(--color-text)
     border-radius: 1px
     transition: transform $transition-base, opacity $transition-base
 

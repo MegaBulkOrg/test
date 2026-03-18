@@ -9,24 +9,24 @@
   font-weight: 600
   border-radius: $border-radius
   border: 2px solid transparent
-  transition: background-color $transition-base, border-color $transition-base
+  transition: background-color $transition-base, border-color $transition-base, color $transition-base
   text-decoration: none
   line-height: 1.4
 
 .primary
-  background-color: $color-primary
-  color: $color-bg
-  border-color: $color-primary
+  background-color: var(--color-primary)
+  color: var(--color-bg)
+  border-color: var(--color-primary)
 
   &:hover
-    background-color: $color-primary-hover
-    border-color: $color-primary-hover
+    background-color: var(--color-primary-hover)
+    border-color: var(--color-primary-hover)
 
 .secondary
   background-color: transparent
-  color: $color-primary
-  border-color: $color-primary
+  color: var(--color-primary)
+  border-color: var(--color-primary)
 
   &:hover
-    background-color: $color-primary
-    color: $color-bg
+    background-color: var(--color-primary)
+    color: var(--color-bg)
