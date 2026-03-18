@@ -1,0 +1,159 @@
+@use '../../styles/variables' as *
+
+// Hero
+.hero
+  padding: $spacing-3xl 0
+  background-color: $color-bg-alt
+  min-height: 420px
+  display: flex
+  align-items: center
+
+  @media (max-width: 768px)
+    padding: $spacing-2xl 0
+    min-height: auto
+
+.heroContent
+  max-width: 720px
+
+.heroTitle
+  font-size: $font-size-3xl
+  color: $color-text
+  margin-bottom: $spacing-sm
+  line-height: 1.15
+
+  @media (max-width: 768px)
+    font-size: $font-size-2xl
+
+.heroAccent
+  display: block
+  color: $color-primary
+  margin-top: $spacing-xs
+
+.heroDescription
+  font-size: $font-size-lg
+  color: $color-text-secondary
+  margin-bottom: $spacing-lg
+  line-height: 1.6
+  max-width: 600px
+
+  @media (max-width: 768px)
+    font-size: $font-size-base
+
+// О курсе
+.aboutGrid
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: $spacing-lg
+
+  @media (max-width: 768px)
+    grid-template-columns: 1fr
+    gap: $spacing-md
+
+.aboutCard
+  padding: $spacing-lg
+  background-color: $color-bg-alt
+  border-radius: $border-radius-lg
+  border: 1px solid $color-border
+
+.aboutCardTitle
+  font-size: $font-size-lg
+  color: $color-text
+  margin-bottom: $spacing-xs
+
+.aboutCardText
+  font-size: $font-size-base
+  color: $color-text-secondary
+  line-height: 1.6
+
+// Программа курса
+.programList
+  display: flex
+  flex-direction: column
+  gap: $spacing-md
+
+.programItem
+  display: flex
+  align-items: flex-start
+  gap: $spacing-sm
+  padding: $spacing-md
+  background-color: $color-bg
+  border-radius: $border-radius-lg
+  border: 1px solid $color-border
+
+.programNumber
+  flex-shrink: 0
+  width: 40px
+  height: 40px
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: $color-primary
+  color: $color-bg
+  font-weight: 700
+  font-size: $font-size-base
+  border-radius: $border-radius
+
+.programItemTitle
+  font-size: $font-size-base
+  font-weight: 600
+  color: $color-text
+  margin-bottom: 4px
+
+.programItemText
+  font-size: $font-size-sm
+  color: $color-text-secondary
+  line-height: 1.5
+
+// Для кого
+.audienceGrid
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: $spacing-lg
+
+  @media (max-width: 768px)
+    grid-template-columns: 1fr
+    gap: $spacing-md
+
+.audienceCard
+  text-align: center
+  padding: $spacing-lg
+  background-color: $color-bg-alt
+  border-radius: $border-radius-lg
+  border: 1px solid $color-border
+
+.audienceIcon
+  font-size: 36px
+  display: block
+  margin-bottom: $spacing-sm
+
+.audienceText
+  font-size: $font-size-base
+  color: $color-text-secondary
+  line-height: 1.5
+
+// Формат обучения
+.formatGrid
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: $spacing-lg
+
+  @media (max-width: 768px)
+    grid-template-columns: 1fr
+    gap: $spacing-md
+
+.formatCard
+  padding: $spacing-lg
+  background-color: $color-bg
+  border-radius: $border-radius-lg
+  border: 1px solid $color-border
+
+.formatCardTitle
+  font-size: $font-size-lg
+  font-weight: 600
+  color: $color-text
+  margin-bottom: $spacing-xs
+
+.formatCardText
+  font-size: $font-size-base
+  color: $color-text-secondary
+  line-height: 1.6
