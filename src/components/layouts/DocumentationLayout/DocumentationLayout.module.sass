@@ -1,0 +1,29 @@
+@use "../../../styles/mixins" as mixins
+@use "../../../styles/vars" as vars
+
+.root
+  display: grid
+  gap: 24px
+  grid-template-columns: 320px minmax(0, 1fr)
+  min-height: 100vh
+  padding: 24px
+  background: radial-gradient(circle at top left, vars.$color-bg-accent, transparent 30%), vars.$color-bg-page
+
+  +mixins.tablet
+    grid-template-columns: 1fr
+    padding: 20px
+
+  +mixins.mobile
+    gap: 18px
+    padding: 16px
+
+.navigation
+  align-self: start
+  position: sticky
+  top: 24px
+
+  +mixins.tablet
+    position: static
+
+.content
+  min-width: 0

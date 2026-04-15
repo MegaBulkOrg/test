@@ -1,0 +1,60 @@
+@use "../../../../styles/vars" as vars
+
+.card
+  backdrop-filter: blur(14px)
+  background: rgba(vars.$color-bg-surface, 0.9)
+  border: 1px solid vars.$color-border-default
+  box-shadow: 0 24px 60px vars.$color-shadow-soft
+
+.header
+  display: flex
+  gap: 12px
+  justify-content: space-between
+  margin-bottom: 18px
+
+.caption
+  margin-top: 8px
+
+.toggle
+  margin-bottom: 16px
+
+.state
+  align-items: center
+  display: flex
+  justify-content: center
+  min-height: 96px
+
+.list
+  display: grid
+  gap: 10px
+
+.item
+  align-items: center
+  background: vars.$color-bg-surface
+  border: 1px solid vars.$color-border-default
+  border-radius: 16px
+  color: vars.$color-typo-primary
+  cursor: pointer
+  display: flex
+  gap: 12px
+  padding: 14px 16px
+  text-align: left
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease
+  width: 100%
+
+.item:hover
+  border-color: vars.$color-border-strong
+  box-shadow: 0 14px 30px vars.$color-shadow-soft
+  transform: translateY(-1px)
+
+.itemActive
+  @extend .item
+  background: linear-gradient(135deg, vars.$color-bg-accent, vars.$color-bg-surface)
+  border-color: vars.$color-link
+
+.itemIcon
+  color: vars.$color-link
+  flex: 0 0 auto
+
+.itemText
+  min-width: 0

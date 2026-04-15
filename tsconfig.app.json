@@ -7,6 +7,17 @@
     "module": "ESNext",
     "types": ["vite/client"],
     "skipLibCheck": true,
+    "resolveJsonModule": true,
+
+    /* Aliases */
+    "paths": {
+      "Assets/*": ["./src/assets/*"],
+      "StateManager/*": ["./src/redux/*"],
+      "Pages/*": ["./src/pages/*"],
+      "Components/*": ["./src/components/*"],
+      "Styles/*": ["./src/styles/*"],
+      "Shared/*": ["./src/shared/*"]
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",
